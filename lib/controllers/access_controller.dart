@@ -32,7 +32,7 @@ class AccessController {
             }));
 
     if (response.statusCode == 200) {
-      String token = jsonDecode(response.body)['token'];
+      String token = jsonDecode(response.body)['accessToken'];
       int userId = jsonDecode(response.body)['id'];
 
       _sharedPreferences = await SharedPreferences.getInstance();
